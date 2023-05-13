@@ -115,4 +115,22 @@ print(height_age_arr.shape)
 print(height_age_arr[:,:3])
 printStarz()
 
+height_age_arr = np.vstack((heights_arr, ages_arr))#the same as axis = 0
+
+print(height_age_arr.shape)
+print(height_age_arr[:,:3])
+printStarz()
+
+height_age_arr = np.concatenate((heights_arr, ages_arr), axis=1)
+
+print(height_age_arr.shape)
+print(height_age_arr[:,:3])
+printStarz()
+
+height_age_arr = np.hstack((heights_arr, ages_arr))#the same as axis = 1
+
+print(height_age_arr.shape)
+print(height_age_arr[:,:3])
+printStarz()
+
 ######################################################################################################################

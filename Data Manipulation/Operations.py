@@ -23,6 +23,7 @@ ages_arr = np.array([57, 61, 57, 57, 58, 57, 61, 54, 68, 51, 49, 64, 50, 48, 65,
 heights_arr = heights_arr.reshape((45,1))
 height_age_arr = np.hstack((heights_arr, ages_arr))
 
+print(height_age_arr.shape)
 print(height_age_arr[:,0]*0.0328084)
 printStarz()
 
@@ -42,7 +43,7 @@ In order to sum all heights and sum all ages separately,
 we can specify axis=0 to calculate the sum across the rows, 
 that is, it computes the sum for each column, or column sum. 
 On the other hand, to obtain the row sums specify axis=1. 
-In this example, we want to calculate the total sum of heights and ages, respectively :
+In this example, we want to calculate the total sum of heights and ages , respectively :
 """
 
 print(height_age_arr.sum(axis=0))
@@ -64,7 +65,6 @@ printStarz()
 
 mask = height_age_arr[:, 0] >= 182
 tall_presidents = height_age_arr[mask, ]
-tall_presidents.shape
 
 print(tall_presidents.shape)
 printStarz()
@@ -80,6 +80,7 @@ In our example, the criteria was height of 182cm or taller.
 
 mask = (height_age_arr[:, 0]>=182) & (height_age_arr[:,1]<=50)
 
+print(height_age_arr.shape)
 print(height_age_arr[mask,])
 printStarz()
 
@@ -92,5 +93,3 @@ print(np.array([[1,2,3],[1,2,3]]).shape)
 printStarz()
 
 ########################################################################
-
-
